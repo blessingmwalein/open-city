@@ -162,6 +162,68 @@
           </button>
         </div>
       </div>
+
+      <h2 class="text-lg font-semibold leading-7 text-gray-900 mt-5">
+        Location
+      </h2>
+      <div class="mt-4">
+        <!-- Button Selector Cards -->
+
+        <div class="grid grid-cols-3 gap-4">
+          <!-- Option 1: Own a Company Looking for Investors -->
+          <button
+            class="selector-card border border-gray-300 rounded-lg p-2 flex flex-col hover:border-indigo-400 hover:border-2"
+            (click)="selectLocation('local')"
+            [ngClass]="{ selected: selectedLocation === 'local' }"
+            type="button"
+          >
+            <div class="flex items-center mb-2">
+              <div
+                class="icon-wrapper mr-2 bg-yellow-200 rounded-full opacity-80 p-2"
+              >
+                <img
+                  src="../../../assets/icons/zimbabwe.png"
+                  alt="Own a Company Icon"
+                  height="40"
+                  width="40"
+                  class=""
+                />
+              </div>
+              <div class="flex flex-col items-start ml-3">
+                <h3 class="option-title text-md font-semibold">Currently In Zimbabwe</h3>
+
+              </div>
+            </div>
+          </button>
+
+          <!-- Option 2: New Investor Looking for Company to Invest -->
+          <button
+            class="selector-card border border-gray-300 rounded-lg p-2 flex flex-col"
+            (click)="selectLocation('outside')"
+            [ngClass]="{ selected: selectedLocation === 'outside' }"
+            type="button"
+          >
+            <div class="flex items-center mb-2">
+              <div
+                class="icon-wrapper mr-2 bg-gray-blue-200 rounded-full opacity-80 p-2"
+              >
+                <img
+                  src="../../../assets/icons/global.png"
+                  alt="Own a Company Icon"
+                  height="40"
+                  width="40"
+                />
+              </div>
+              <div class="flex flex-col items-start ml-3">
+                <h3 class="option-title text-md font-semibold">Out Side Zimbabwe</h3>
+
+
+              </div>
+            </div>
+          </button>
+
+        </div>
+      </div>
     </div>
   </div>
 
@@ -170,7 +232,8 @@
       Cancel
     </button>
     <button
-      type="submit"
+      type="button"
+      (click)="onSubmit()"
       class="rounded-md bg-indigo-600 px-4 py-3 text-md font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
     >
       Get Started

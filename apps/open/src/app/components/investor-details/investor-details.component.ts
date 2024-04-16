@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-investor-details',
@@ -9,7 +10,9 @@ import { CommonModule } from '@angular/common';
   styleUrl: './investor-details.component.css',
 })
 export class InvestorDetailsComponent {
+  readonly #router = inject(Router);
   selectedOption = 'ownCompany';
+  selectedLocation = 'local';
 
   constructor() {
     this.selectedOption = 'ownCompany'; // Initialize selected option
@@ -19,7 +22,12 @@ export class InvestorDetailsComponent {
     this.selectedOption = option;
   }
 
+  selectLocation(location: string) {
+    // Handle location selection logic here
+    this.selectedLocation = location;
+  }
+
   onSubmit() {
-    // Handle form submission logic here
+      this.#router.navigate([`/personal-details`]);
   }
 }
