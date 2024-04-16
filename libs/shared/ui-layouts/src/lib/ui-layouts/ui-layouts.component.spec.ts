@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { AppComponent } from './app.component';
+import { UiLayoutsComponent } from './ui-layouts.component';
 
-describe('AppComponent', () => {
-  let component: AppComponent;
-  let fixture: ComponentFixture<AppComponent>;
+describe('UiLayoutsComponent', () => {
+  let component: UiLayoutsComponent;
+  let fixture: ComponentFixture<UiLayoutsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AppComponent],
+      imports: [UiLayoutsComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(AppComponent);
+    fixture = TestBed.createComponent(UiLayoutsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

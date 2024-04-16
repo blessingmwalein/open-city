@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@open-city/ui-layouts": ["libs/shared/ui-layouts/src/index.ts"],
+      "@open-city/workspace-plugin": ["tools/workspace-plugin/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
